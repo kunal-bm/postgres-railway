@@ -2,6 +2,16 @@
 
 This repository contains a Docker setup for deploying PostgreSQL on Railway.
 
+## Important Note
+
+The Dockerfile contains default credentials for initial setup:
+
+- Default User: postgres
+- Default Password: defaultpassword
+- Default Database: railway_db
+
+**Make sure to change these in Railway's environment variables for production use!**
+
 ## Local Development
 
 1. Copy the environment file:
@@ -47,6 +57,13 @@ railway link
 ```bash
 railway up
 ```
+
+5. Set Environment Variables in Railway Dashboard:
+   - Go to your project settings
+   - Add the following variables:
+     - `POSTGRES_USER`
+     - `POSTGRES_PASSWORD`
+     - `POSTGRES_DB`
 
 ## Environment Variables
 
